@@ -1,0 +1,113 @@
+.photo {  
+  border-bottom: 1px solid @gray-light;
+
+  &:first-child {
+    border-top: 1px solid @gray-light;
+  }
+
+  &__img {
+    margin-bottom: 15px;    
+  }
+
+
+  &__info {
+    text-align: left;
+  }
+
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+
+  &__autor {
+    margin-bottom: 8px;
+    text-transform: none;
+  }
+
+
+  &__like {
+    font-weight: 700;
+    line-height: 1.9;
+    padding-left: 30px;
+    background: url(../img/icon-like.svg) no-repeat;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url(../img/icon-like-hover.svg);
+    }
+  }
+}
+
+
+@media @mobile-width {
+  .photo {
+    &__img {
+      background-color: @gray-lighter;
+    }
+  }
+}
+
+
+@media @tabled-width {
+  .photo {
+    border: none;
+
+    &:first-child {
+      border-top: none;
+    }
+
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+
+    &__info {
+      position: relative;
+      padding: 15px;
+    }
+
+
+    &__autor {
+      margin-bottom: 0;
+    }
+
+
+    &__like {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      margin-top: -13px;
+    }
+  }  
+}
+
+
+@media @desktop-width {
+  .photo {
+    &__info {
+      margin-top: -82px;
+      color: #FFF;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+    }
+
+
+    &__autor {
+      margin-bottom: 0;
+    }
+
+
+    &__like {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      margin-top: -13px;
+    }
+  }
+}
