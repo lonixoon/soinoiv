@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Примеры вёрстки</title>
 </head>
@@ -13,13 +12,44 @@
   </header>
   <main class="page-body">
     <section class="portfolio">
-    <h1 class="portfolio__title  visually-hidden">Портфолио</h1>
+      <h1 class="portfolio__title  visually-hidden">Портфолио</h1>
     <div class="portfolio__items">
-      <div class="portfolio__item">
-        <img src="img/sedona-index.jpg" alt="Седона - главная страница">
+      <div class="portfolio__item  portfolio__item--left">
+          <ul class="portfolio__description  portfolio__description--left">
+            <li>Адаптивный дизайн</li>
+            <li>Резиновая мобильная версия</li>
+            <li>Методология БЭМ</li>
+            <li>Препроцессор less</li>
+          </ul>
+        <a href="https://lonixoon.github.io/sedona-adaptive/"><img class="portfolio__img  portfolio__img--left" src="img/sedona-index.jpg" alt="Седона - главная страница"></a>
       </div>
-      <div class="portfolio__item">
-        <img src="img/Sedona-photo.jpg" alt="Седона - фото">
+
+      <div class="portfolio__item  portfolio__item--right">
+        <ul class="portfolio__description  portfolio__description--right">
+          <li>Адаптивный резиновый дизайн</li>            
+          <li>Методология БЭМ</li>
+          <li>Препроцессор less</li>
+        </ul>
+        <a href="https://lonixoon.github.io/barbershop-adaptive/"><img class="portfolio__img  portfolio__img--right"  src="img/barbershop-index.png" alt="Седона - фото"></a>
+      </div>
+
+      <div class="portfolio__item  portfolio__item--left">
+          <ul class="portfolio__description  portfolio__description--left">
+            <li>Фиксированный дизайн</li>
+            <!-- <li>Резиновая мобильная версия</li> -->
+            <li>Методология БЭМ</li>
+            <!-- <li>Препроцессор less</li> -->
+          </ul>
+        <a href="https://lonixoon.github.io/nerds/"><img class="portfolio__img  portfolio__img--left" src="img/nerds-all.jpg" alt="Седона - главная страница"></a>
+      </div>
+
+      <div class="portfolio__item  portfolio__item--right">
+        <ul class="portfolio__description  portfolio__description--right">
+          <li>Адаптивный резиновый дизайн</li>            
+          <li>Методология БЭМ</li>
+          <li>Препроцессор less</li>
+        </ul>
+        <a href="https://lonixoon.github.io/barbershop/"><img class="portfolio__img  portfolio__img--right"  src="img/barbershop-index.png" alt="Седона - фото"></a>
       </div>
     </div>
     </section>
