@@ -1,12 +1,32 @@
 .page-header {
 
-  // &__title-wrapper {
-  //   background-color: #eee;
-  // }
-
   &__title {
-    margin: 20px 0 40px 0;
-    padding: 20px 0px;
+    margin: 20px 0 20px 0;
+    padding: 20px 25px;
     background: @gray-light;
+  }
+}
+
+
+@media @mobile-width {
+  .page-header {
+  }
+}
+
+
+@media @tabled-width {
+  .page-header {
+    &__title {
+      margin: 20px 0 40px 0;
+      padding: 20px 0px;
+      background: @gray-light;
+    }
+  }
+}
+
+
+@media @desktop-width {
+  .page-header {
+    
   }
 }

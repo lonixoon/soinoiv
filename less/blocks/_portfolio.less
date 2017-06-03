@@ -1,28 +1,16 @@
 .portfolio {
   &__items {
     display: flex;
-    justify-content: space-between;
+    padding: 0 10px;
     flex-wrap: wrap;
   }
 
   &__item {
     padding: 10px;
     margin-bottom: 40px;
-    width: 49%;
-    // width: 33.1%;
-    // border-radius: 10px;
-    // border-top-right-radius: 10px;
+    width: 100%;
+    border-radius: 10px;
     background: @gray-lighter;
-
-    &--left {
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-
-    &--right {
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-    }
   }
 
   &__description {
@@ -32,28 +20,80 @@
     background: @gray-light;
     margin: 0;
     padding: 10px 0 10px 30px;
-    min-height: 112px; 
-
-    &--left {
-      border-top-right-radius: 10px;
-    }
-
-    &--right {
-      border-top-left-radius: 10px;
-    }
-    // border-top-left-radius: 10px;
-
+    min-height: 112px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
   }
 
+  &__img-wrapper {
+    position: relative;
+  }
+
+  &__open-links {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    aligns-items: center;
+    position: absolute;
+    padding: 30px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 50px 20px #dedede;
+  }
+  &__img-wrapper:hover &__open-links,
+  &__img-wrapper:active &__open-links {
+    display: flex;
+  }
+
+
   &__img {
-    &--left {
-      // border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius:  5px;
+  }
+}
+
+
+@media @tabled-width {
+  .portfolio {
+    &__item {
+      padding: 10px;
+      margin-bottom: 40px;
+      width: 366px;
+      margin-right: 15px;
+      border-radius: 10px;
+      background: @gray-lighter;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
 
-    &--right {
-      // border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+
+    &__open-links {
+      padding: 50px;
+    }
+  }
+}
+
+@media @desktop-width {
+  .portfolio {
+    &__item {
+      padding: 10px;
+      margin-bottom: 40px;
+      width: 383px;
+      margin-right: 15px;
+      border-radius: 10px;
+      background: @gray-lighter;
+
+      &:nth-child(2n) {
+        margin-right: 15px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 }
